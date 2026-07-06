@@ -5,19 +5,13 @@ import TopBar from './components/TopBar';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import PainIdentification from './components/PainIdentification';
-import InteractiveSituationSelector from './components/InteractiveSituationSelector';
 import ProblemReframe from './components/ProblemReframe';
 import SolutionOverview from './components/SolutionOverview';
 import LiteracyMap from './components/LiteracyMap';
+import ActivitySection from './components/ActivitySection';
 import HowItWorks from './components/HowItWorks';
-import Deliverables from './components/Deliverables';
-import WhatItIsNot from './components/WhatItIsNot';
-import WhoItIsFor from './components/WhoItIsFor';
-import ParentTransformation from './components/ParentTransformation';
 import ProfessionalSection from './components/ProfessionalSection';
-import OfferSection from './components/OfferSection';
-import FAQSection from './components/FAQSection';
-import FinalCTA from './components/FinalCTA';
+import OfferFaqFinalSection from './components/OfferFaqFinalSection';
 import Footer from './components/Footer';
 import MobileStickyCTA from './components/MobileStickyCTA';
 import { trackEvent } from './config/offer';
@@ -26,7 +20,6 @@ function App() {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
-    // Analytics tracking check
     trackEvent('Landing Page Loaded');
 
     const handleScroll = () => {
@@ -57,55 +50,37 @@ function App() {
       {/* Navigation Header */}
       <Header />
 
-      {/* Main Sections Content */}
+      {/* Main Content: Exactly 9 Sections */}
       <main>
-        {/* Section 1: Hero Principal */}
+        {/* SEÇÃO 1 — HERO PRINCIPAL */}
         <HeroSection />
 
-        {/* Section 2: Identificação com a Dor */}
+        {/* SEÇÃO 2 — IDENTIFICAÇÃO COM OS PAIS */}
         <PainIdentification />
 
-        {/* Section 3: Seletor Interativo de Cenários */}
-        <InteractiveSituationSelector />
-
-        {/* Section 4: Reenquadramento do Problema */}
+        {/* SEÇÃO 3 — O PROBLEMA NÃO É FALTA DE ATIVIDADES */}
         <ProblemReframe />
 
-        {/* Section 5: Apresentação da Solução */}
+        {/* SEÇÃO 4 — CONHEÇA O SOS ALFABETIZAÇÃO */}
         <SolutionOverview />
 
-        {/* Section 6: O Método do Mapa da Alfabetização */}
+        {/* SEÇÃO 5 — MAPA DA ALFABETIZAÇÃO */}
         <LiteracyMap />
 
-        {/* Section 7: Como Funciona o Processo */}
+        {/* SEÇÃO 6 — ORIENTAÇÃO PRÁTICA E ATIVIDADES */}
+        <ActivitySection />
+
+        {/* SEÇÃO 7 — COMO FUNCIONA E O QUE A FAMÍLIA RECEBE */}
         <HowItWorks />
 
-        {/* Section 8: Os Entregáveis da Consultoria */}
-        <Deliverables />
-
-        {/* Section 9: Alinhamento de Expectativas / O que não é */}
-        <WhatItIsNot />
-
-        {/* Section 10: Para Quem É e Quem Não é */}
-        <WhoItIsFor />
-
-        {/* Section 11: Transformação de sentimentos dos Pais */}
-        <ParentTransformation />
-
-        {/* Section 12: Apresentação da Profissional Responsável */}
+        {/* SEÇÃO 8 — SOBRE TAINÁ SOUZA */}
         <ProfessionalSection />
 
-        {/* Section 13: Oferta Principal */}
-        <OfferSection />
-
-        {/* Section 14: Perguntas Frequentes (FAQ) */}
-        <FAQSection />
-
-        {/* Section 15: Chamada Final */}
-        <FinalCTA />
+        {/* SEÇÃO 9 — OFERTA, FAQ E CHAMADA FINAL */}
+        <OfferFaqFinalSection />
       </main>
 
-      {/* Footer & Legals */}
+      {/* Footer & Legals (Not counted as a section) */}
       <Footer />
 
       {/* Sticky Bottom Bar on Mobile Devices */}
