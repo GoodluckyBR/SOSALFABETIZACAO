@@ -40,3 +40,37 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #94A3B8;
 }
+
+/* Brand logo animations representing alert & writing process */
+@keyframes pulse-sos {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0px rgba(214, 40, 40, 0));
+  }
+  50% {
+    transform: scale(1.06);
+    filter: drop-shadow(0 0 4px rgba(214, 40, 40, 0.4));
+  }
+}
+
+@keyframes write-alphabet {
+  0% {
+    opacity: 0.7;
+    letter-spacing: -0.05em;
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: normal;
+  }
+}
+
+.animate-sos-alert {
+  display: inline-block;
+  animation: pulse-sos 2.5s infinite ease-in-out;
+}
+
+.animate-writing-text {
+  display: inline-block;
+  animation: write-alphabet 3s ease-in-out infinite alternate;
+}
+

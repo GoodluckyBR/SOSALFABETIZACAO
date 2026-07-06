@@ -12,8 +12,8 @@ export default function Footer() {
           {/* Logo */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center font-bold text-xl md:text-2xl cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-              <span className="text-[#D62828] font-extrabold mr-1">SOS</span>
-              <span className="text-white">Alfabetização</span>
+              <span className="text-[#D62828] font-extrabold mr-1 animate-sos-alert">SOS</span>
+              <span className="text-white animate-writing-text">Alfabetização</span>
             </div>
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm">
               Um olhar pedagógico para ajudar os pais a compreenderem o desenvolvimento de seus filhos e agirem com segurança.

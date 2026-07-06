@@ -27,8 +27,8 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0 flex items-center font-bold text-xl md:text-2xl cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <span className="text-[#D62828] font-extrabold mr-1">SOS</span>
-          <span className="text-[#0B1F3A]">Alfabetização</span>
+          <span className="text-[#D62828] font-extrabold mr-1 animate-sos-alert">SOS</span>
+          <span className="text-[#0B1F3A] animate-writing-text">Alfabetização</span>
         </div>
 
         {/* Desktop Nav */}
