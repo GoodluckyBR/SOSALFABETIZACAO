@@ -21,7 +21,7 @@ export default function HeroSection() {
           
           {/* Column 1 (Image): Renders FIRST on Mobile, SECOND on Desktop */}
           <div className="lg:col-span-5 order-1 lg:order-2 flex flex-col items-center justify-center">
-            <div className="relative w-full max-w-[420px] h-[clamp(220px,34vh,320px)] lg:h-[480px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl lg:shadow-2xl border-2 sm:border-4 border-white bg-[#EAF1F8] group">
+            <div className="relative w-full max-w-[420px] h-[320px] sm:h-[400px] lg:h-[520px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl lg:shadow-2xl border-2 sm:border-4 border-white bg-[#EAF1F8] group">
               {/* Colored backdrop card */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F3A]/45 via-transparent to-transparent z-10" />
               
