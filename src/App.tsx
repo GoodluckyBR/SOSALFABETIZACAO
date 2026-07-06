@@ -14,6 +14,7 @@ import ProfessionalSection from './components/ProfessionalSection';
 import OfferFaqFinalSection from './components/OfferFaqFinalSection';
 import Footer from './components/Footer';
 import MobileStickyCTA from './components/MobileStickyCTA';
+import WhatsappWidget from './components/WhatsappWidget';
 import { trackEvent } from './config/offer';
 
 function App() {
@@ -85,6 +86,9 @@ function App() {
 
       {/* Sticky Bottom Bar on Mobile Devices */}
       <MobileStickyCTA />
+
+      {/* WhatsApp Floating Button */}
+      <WhatsappWidget />
 
       {/* Back to Top Button */}
       {showScrollTop && (
