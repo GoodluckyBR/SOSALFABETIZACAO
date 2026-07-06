@@ -24,7 +24,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0 flex items-center font-bold text-xl md:text-2xl cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <span className="text-[#D62828] font-extrabold mr-1">SOS</span>
@@ -65,7 +65,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden absolute top-20 left-0 w-full bg-white border-b border-slate-100 shadow-xl py-6 px-4 flex flex-col space-y-4 animate-fade-in-down">
+        <div className="lg:hidden absolute top-16 md:top-20 left-0 w-full bg-white border-b border-slate-100 shadow-xl py-6 px-4 flex flex-col space-y-4 animate-fade-in-down">
           <button onClick={() => scrollToSection('how-it-works-section')} className="text-left py-2 font-medium text-slate-700 hover:text-[#D62828]">Como funciona</button>
           <button onClick={() => scrollToSection('literacy-map')} className="text-left py-2 font-medium text-slate-700 hover:text-[#D62828]">Mapa da Alfabetização</button>
           <button onClick={() => scrollToSection('deliverables-section')} className="text-left py-2 font-medium text-slate-700 hover:text-[#D62828]">O que você recebe</button>

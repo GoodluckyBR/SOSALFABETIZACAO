@@ -2,7 +2,7 @@ export const offerConfig = {
   price: "R$147",
   originalPrice: "R$197",
   checkoutUrl: "#", // Link do checkout
-  whatsappUrl: "https://wa.me/553891829351?text=Ol%C3%A1%2C%20Quero%20saber%20mais%20sobre%20a%20consultoria%20",
+  whatsappUrl: "https://wa.me/553891829351?text=Ol%C3%A1%2C%20Tain%C3%A1!%20Conheci%20o%20SOS%20Alfabetiza%C3%A7%C3%A3o%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consultoria.",
   schedulingUrl: "#", // Link para agendamento após a compra
   professionalName: "Tainá Souza",
   professionalTitle: "Professora dedicada à alfabetização infantil e à orientação de pais e responsáveis",

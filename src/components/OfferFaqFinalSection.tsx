@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Check, ShieldCheck, CreditCard, ChevronDown, ChevronUp, Sparkles, ArrowRight } from 'lucide-react';
+import { Check, ShieldCheck, CreditCard, ChevronDown, ChevronUp, Sparkles, ArrowRight, FileText, Compass, Calendar, Video, BookOpen } from 'lucide-react';
 import { offerConfig, trackEvent } from '../config/offer';
 
 export default function OfferFaqFinalSection() {
@@ -73,10 +73,10 @@ export default function OfferFaqFinalSection() {
     <div id="offer-faq-final-section">
       
       {/* ----------------- BLOCO 1: OFERTA ----------------- */}
-      <section className="py-20 bg-white" id="offer-section">
+      <section className="py-20 bg-[#F5F7FA]" id="offer-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-xs font-bold text-[#D62828] uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full border border-red-100">
               Valor Exclusivo
             </span>
@@ -85,6 +85,39 @@ export default function OfferFaqFinalSection() {
             </h2>
           </div>
 
+          {/* Graphical Mockup of deliverables above the pricing card */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-10 text-left">
+            <div className="bg-white border border-slate-100 p-4 rounded-2xl shadow-xs flex items-center gap-2">
+              <FileText className="w-5 h-5 text-blue-600 flex-shrink-0" />
+              <div>
+                <p className="text-[10px] text-slate-400 font-bold uppercase">Mockup 1</p>
+                <p className="text-xs font-bold text-slate-800 leading-tight">Relatório PDF</p>
+              </div>
+            </div>
+            <div className="bg-white border border-slate-100 p-4 rounded-2xl shadow-xs flex items-center gap-2">
+              <Compass className="w-5 h-5 text-green-600 flex-shrink-0" />
+              <div>
+                <p className="text-[10px] text-slate-400 font-bold uppercase">Mockup 2</p>
+                <p className="text-xs font-bold text-slate-800 leading-tight">Mapa Alfabetizar</p>
+              </div>
+            </div>
+            <div className="bg-white border border-slate-100 p-4 rounded-2xl shadow-xs flex items-center gap-2">
+              <Calendar className="w-5 h-5 text-yellow-500 flex-shrink-0" />
+              <div>
+                <p className="text-[10px] text-slate-400 font-bold uppercase">Mockup 3</p>
+                <p className="text-xs font-bold text-slate-800 leading-tight">Plano 30 Dias</p>
+              </div>
+            </div>
+            <div className="bg-white border border-slate-100 p-4 rounded-2xl shadow-xs flex items-center gap-2">
+              <Video className="w-5 h-5 text-red-500 flex-shrink-0" />
+              <div>
+                <p className="text-[10px] text-slate-400 font-bold uppercase">Mockup 4</p>
+                <p className="text-xs font-bold text-slate-800 leading-tight">Consulta ~1h</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Pricing Card */}
           <div id="offer-card" className="max-w-3xl mx-auto bg-[#0B1F3A] rounded-3xl text-white shadow-2xl border border-white/10 overflow-hidden relative">
             <div className="bg-gradient-to-r from-red-500 to-[#D62828] text-center py-2 text-xs font-bold tracking-widest uppercase">
               Consultoria Individual SOS Alfabetização
@@ -142,7 +175,7 @@ export default function OfferFaqFinalSection() {
       </section>
 
       {/* ----------------- BLOCO 2: FAQ ----------------- */}
-      <section className="py-20 bg-[#F5F7FA]" id="faq">
+      <section className="py-20 bg-white" id="faq">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center mb-16">
@@ -154,11 +187,11 @@ export default function OfferFaqFinalSection() {
             </h2>
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-4">
             {faqs.map((faq, idx) => {
               const isOpen = openFaqIndex === idx;
               return (
-                <div key={idx} className="bg-white border border-slate-100 rounded-xl overflow-hidden shadow-sm transition-all">
+                <div key={idx} className="bg-[#F5F7FA] border border-slate-100 rounded-xl overflow-hidden shadow-xs transition-all">
                   <button
                     onClick={() => {
                       trackEvent('Toggle FAQ', { question: faq.q, open: !isOpen });
@@ -175,7 +208,7 @@ export default function OfferFaqFinalSection() {
                   </button>
 
                   {isOpen && (
-                    <div className="px-6 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-50 pt-4">
+                    <div className="px-6 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/50 pt-4 bg-white">
                       {faq.a}
                     </div>
                   )}
@@ -192,17 +225,27 @@ export default function OfferFaqFinalSection() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#0B1F3A] to-[#071426] -z-10" />
         
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+          
+          {/* Visual path connector details above final text */}
+          <div className="w-full h-12 flex items-center justify-center gap-4 opacity-30 my-2">
+            <BookOpen className="w-5 h-5" />
+            <span className="h-0.5 w-12 bg-white" />
+            <Compass className="w-5 h-5 text-red-400" />
+            <span className="h-0.5 w-12 bg-white" />
+            <Calendar className="w-5 h-5" />
+          </div>
+
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/50 text-red-400 text-xs font-semibold uppercase tracking-wider border border-red-800/40 w-fit mx-auto">
             <Sparkles className="w-4 h-4 text-red-400" />
             Decisão Segura
           </div>
 
-          <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight text-white">
+          <h2 className="text-2xl sm:text-4xl font-extrabold leading-tight text-white">
             Você não precisa ter todas as respostas. <br className="hidden md:inline" />
             Precisa saber quais são os próximos passos.
           </h2>
 
-          <p className="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed font-semibold">
             Com a orientação da professora {offerConfig.professionalName}, você poderá compreender melhor o momento da alfabetização do seu filho e apoiá-lo com mais clareza e segurança.
           </p>
 
